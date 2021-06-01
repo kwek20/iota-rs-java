@@ -1,2 +1,2 @@
-// include   ':native'
-// project(':native').projectDir = new File(settingsDir, '../iota.rs/bindings/java/native')
+include   ':native'
+project(':native').projectDir = new File(settingsDir, '../iota.rs/bindings/java/native')

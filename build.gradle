@@ -18,8 +18,8 @@ repositories {
 }
 
 dependencies {
-    implementation files("native.jar")
-    // compile project(':native')
+    //implementation files("native.jar")
+    implementation project(':native')
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
