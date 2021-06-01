@@ -1,0 +1,51 @@
+plugins {
+    // Apply the java-library plugin to add support for Java
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+    // Apply the application plugin to add support for building a CLI application.
+    id 'application'
+}
+
+// Location of the libiota_client.so. 
+def iotaLibLocation = "../iota.rs/bindings/java/target/debug"
+
+// Project main class
+mainClassName = 'org.example.ExampleApp'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':native')
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
+
+tasks.withType(Test) {
+    systemProperties System.properties
+}
+
+// ON run, add to path
+run.doFirst {
+    systemProperty "java.library.path", file(iotaLibLocation)
+}
+
+// When compiling, update classpath
+compileJava.doFirst {
+    classpath += files(iotaLibLocation)
+}
+
+test {
+    // Always run tests, even when they didnt change
+    outputs.upToDateWhen { false }
+
+    // Gradle ignores java logging, not rust logging
+    testLogging.showStandardStreams = true
+
+    // Set rust output .so/.lib files to path
+    systemProperty "java.library.path", file(iotaLibLocation)
+}
+
