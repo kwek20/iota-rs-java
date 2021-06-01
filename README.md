@@ -3,11 +3,17 @@ Example use of iota.rs Java bindings
 
 ## Preparing gradle
 
+In order to build with the Java bindings, you need the following two parts:
+- JNI bindings linking `Rust` to `C`, and then `C` to java `native` methods
+- Java classes calling those `native` methods
+
+
+
 **Linking the JNI bindings**
 
 Modify `build.gradle` variable `iotaLibLocation` to the location of the iota.rs library file.
 
-This file can be generated at `iota.rs/bindings/java/target/debug`
+This file can be found at `iota.rs/bindings/java/target/debug` after building the bindings with `cargo build` in the `iota.rs/bindings/java` folder
 
 **Linking the Java file (Jar)**
 
