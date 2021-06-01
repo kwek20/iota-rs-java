@@ -18,7 +18,7 @@ Building the jar through gradle in `iota.rs` creates the jar at `iota.rs/binding
 
 ***Directly pointing to the iota.rs project***
 - Uncomment the lines in `settings.gradle`, then:
-- Change `settings.gradle` to point to the `iotaLibLocation` with `\native` appended so we can load the Java files
+- Change `settings.gradle` to point to the `\native` project inside `iota.rs`, so we can load the Java files
 - Add `compile project(':native')` to the `dependencies` section of your `build.gradle`
 
 ## Building your app
