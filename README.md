@@ -7,7 +7,7 @@ Example use of [iota.rs](https://github.com/iotaledger/iota.rs) Java bindings
 $ git clone https://github.com/iotaledger/iota.rs.git
 ```
 
-- A valid C ompiler
+- A valid C compiler
 - [Rust](https://www.rust-lang.org/tools/install) installation on your path
 
 ## Preparing gradle
