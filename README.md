@@ -33,14 +33,14 @@ Building the jar through gradle in `iota.rs` creates the jar at `iota.rs/binding
 
 ***Directly pointing to the iota.rs project***
 - Uncomment the lines in `settings.gradle`, then:
-- Change `settings.gradle` to point to the `\native` project inside `iota.rs`, so we can load the Java files
-- Add `implementation project(':native')` to the `dependencies` section of your `build.gradle`
+- Change `settings.gradle` to point to the `\native` project inside `iota.rs\bindings\java`, so we can load the Java files
+- Add `implementation project(':native')` to the `dependencies` section of your `build.gradle` (and comment  `implementation files("native.jar")` if you have it)
 
 ## Building your app
 
 Run `gradle build` to build.
 
-Run `gradle run` to run. (linking directly to the iota.rs for jar triggers a rerun every time)
+Run `gradle run` to run. (linking directly to the iota.rs for jar triggers a rebuild every time)
 
 Run `gradle test` to specifically run the test.
 
