@@ -9,6 +9,7 @@ $ git clone https://github.com/iotaledger/iota.rs.git
 
 - A valid C compiler
 - [Rust](https://www.rust-lang.org/tools/install) installation on your path
+- [Gradle](https://gradle.org/install/) version 4 or higher (current is 7)
 
 ## Preparing gradle
 
