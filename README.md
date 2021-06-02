@@ -2,7 +2,7 @@
 Example use of [iota.rs](https://github.com/iotaledger/iota.rs) Java bindings
 
 ## Pre-requirements
-- Download or clone the `iota.rs` repository and navigate to the java bindings folder.
+- Download or clone the `iota.rs` repository
 ```
 $ git clone https://github.com/iotaledger/iota.rs.git
 ```
