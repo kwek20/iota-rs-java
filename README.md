@@ -1,7 +1,7 @@
 # iota-rs-java
 Example use of [iota.rs](https://github.com/iotaledger/iota.rs) Java bindings
 
-## Pre-requirements
+## Prerequisite
 - Download or clone the `iota.rs` repository
 ```
 $ git clone https://github.com/iotaledger/iota.rs.git
@@ -22,7 +22,7 @@ In order to build with the Java bindings, you need the following two parts:
 
 Modify `build.gradle` variable `iotaLibLocation` to the location of the iota.rs library file.
 
-This file can be found at `iota.rs/bindings/java/target/debug` after building the bindings with `cargo build` in the `iota.rs/bindings/java` folder
+This file can be found at `iota.rs/bindings/java/target/release` after building the bindings with `cargo build --release` in the `iota.rs/bindings/java` folder
 
 **Linking the Java file (Jar)**
 
