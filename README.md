@@ -11,7 +11,7 @@ $ git clone https://github.com/iotaledger/iota.rs.git
 - [Rust](https://www.rust-lang.org/tools/install) installation on your path
 - [Gradle](https://gradle.org/install/) v4 or higher or [Maven](https://maven.apache.org/download.cgi) installed
 
-## Preparing gradle
+## Preparing your work environment
 
 In order to build with the Java bindings, you need the following two parts:
 1. Java classes calling those `native` methods (`.jar`)
