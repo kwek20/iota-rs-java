@@ -14,7 +14,7 @@ $ git clone https://github.com/iotaledger/iota.rs.git
 ## Preparing your work environment
 
 In order to build with the Java bindings, you need the following two parts:
-1. Java classes calling those `native` methods (`.jar`)
+1. Java classes containing `native` methods which call C code. (`.jar`)
 2. JNI bindings linking `Rust` to `C`, and then `C` to java `native` methods (`.so` , `.dll` or `.dylib` depending on your system)
 
 
