@@ -10,6 +10,11 @@ import org.iota.client.local.*;
 
 public class ExampleApp {
 
+    private static final String MAINNET = "https://chrysalis-nodes.iota.cafe:443";
+    private static final String TESTNET = "https://api.lb-0.testnet.chrysalis2.com:443";
+
+    private static final String NODE = TESTNET;
+
     static {
         NativeAPI.verifyLink();
     }
@@ -28,7 +33,7 @@ public class ExampleApp {
     }
 
     private static Client node() {
-        String nodeUrl = "https://chrysalis-nodes.iota.cafe:443";
+        String nodeUrl = NODE;
         Client iota = Client.Builder().withNode(nodeUrl) // Insert your node URL here
                 // .withNodeAuth("https://somechrysalisiotanode.com", "jwt_or_null",
                 // "name_or_null", "password_or_null") //
@@ -275,7 +280,7 @@ public class ExampleApp {
 
         IndexationPayload indexation_payload = IndexationPayload.fromStrings("Your Index", "Your Data");
 
-        Message message = iota.message().finish(indexation_payload);
+        Message message = iota.message().finishIndex(indexation_payload);
 
         System.out.printf("Message ID: %s", message.id());
     }
