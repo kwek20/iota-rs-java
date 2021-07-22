@@ -1,15 +1,17 @@
 # iota-rs-java
 Example use of [iota.rs](https://github.com/iotaledger/iota.rs) Java bindings
 
-## Pre-requirements
-- Download or clone the `iota.rs` repository and navigate to the java bindings folder.
+## Prerequisite
+- Download or clone the `iota.rs` repository
 ```
 $ git clone https://github.com/iotaledger/iota.rs.git
 ```
 
-- A valid C ompiler
+- A valid C compiler
 - [Rust](https://www.rust-lang.org/tools/install) installation on your path
-- Gradle or Maven installed
+- [Gradle](https://gradle.org/install/) v4 or higher or [Maven](https://maven.apache.org/download.cgi) installed
+
+## Preparing gradle
 
 In order to build with the Java bindings, you need the following two parts:
 1. Java classes calling those `native` methods (`.jar`)
@@ -42,8 +44,8 @@ Building the jar through gradle in `iota.rs` creates the jar at `iota.rs/binding
 
 ***Directly pointing to the iota.rs project***
 - Uncomment the lines in `settings.gradle`, then:
-- Change `settings.gradle` to point to the `\native` project inside `iota.rs`, so we can load the Java files
-- Add `implementation project(':native')` to the `dependencies` section of your `build.gradle`
+- Change `settings.gradle` to point to the `\native` project inside `iota.rs\bindings\java`, so we can load the Java files
+- Add `implementation project(':native')` to the `dependencies` section of your `build.gradle` (and comment  `implementation files("native.jar")` if you have it)
 
 # Step 2: Adding the native library
 
@@ -109,7 +111,7 @@ Run `mvn test` to specifically run the test.
 ## Gradle
 Run `gradle build` to build.
 
-Run `gradle run` to run. (linking directly to the iota.rs for jar triggers a rerun every time)
+Run `gradle run` to run. (linking directly to the iota.rs for jar triggers a rebuild every time)
 
 Run `gradle test` to specifically run the test.
 
