@@ -32,7 +32,7 @@ mvn install:install-file -Dfile=/path/to/iota.rs/bindings/java/native/build/libs
 <dependency>
     <groupId>org.iota.client</groupId>
     <artifactId>native</artifactId>
-    <version>1.0<version>
+    <version>1.0</version>
 </dependency>
 ```
 
