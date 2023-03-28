@@ -8,7 +8,7 @@ plugins {
 }
 
 // Location of the libiota_client.so. 
-def iotaLibLocation = "../iota.rs/bindings/java/target/debug"
+def iotaLibLocation = "../iota.rs/bindings/java/target/release"
 
 // Project main class
 mainClassName = 'org.example.ExampleApp'
